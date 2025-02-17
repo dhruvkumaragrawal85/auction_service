@@ -363,7 +363,7 @@ function Profile() {
 							</div>
 						</div>
 
-						{/* <div className="mt-12">
+						<div className="mt-12">
 							<h2 className="mb-8 text-4xl font-extrabold">
 							 Your Victorious Auctions
 							</h2>
@@ -373,17 +373,17 @@ function Profile() {
 									{paginatedWon.map((auction) => (
 										<div
 											key={auction.auctionId}
-											className="overflow-hidden transition-all duration-300 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 bg-gradient-to-br from-purple-600 via-pink-500 to-red-500"
+											className="overflow-hidden hover:shadow-xl hover:scale-105 border-2 border-blue-500"
 										>
-											<div className="p-6 bg-gray-900 bg-opacity-80">
-												<h3 className="mb-3 text-2xl font-bold text-white">
+											<div className="p-6">
+												<h3 className="mb-3 text-2xl font-bold">
 													{auction.title}
 												</h3>
-												<p className="mb-4 text-gray-300">
+												<p className="mb-4">
 													{auction.description}
 												</p>
 												<p className="mb-2 text-lg">
-													<span className="font-semibold text-yellow-300">
+													<span className="font-semibold text-cyan-400">
 														Winning Bid:
 													</span>{" "}
 													<span className="font-bold text-green-400">
@@ -391,10 +391,10 @@ function Profile() {
 													</span>
 												</p>
 												<p className="mb-4">
-													<span className="font-semibold text-yellow-300">
+													<span className="font-semibold text-cyan-400">
 														End Date:
 													</span>{" "}
-													<span className="text-blue-400">
+													<span className="">
 														{new Date(
 															auction.endDate
 														).toLocaleString()}
@@ -402,9 +402,9 @@ function Profile() {
 												</p>
 												<Link
 													to={`/auction/${auction.auctionId}`}
-													className="inline-block px-6 py-3 text-lg font-semibold text-white transition-all duration-300 transform rounded-full bg-gradient-to-r from-yellow-400 to-red-500 hover:from-yellow-500 hover:to-red-600 hover:shadow-md hover:-translate-y-1"
+													className={`${styles.button} mt-4 800px:mt-0 text-white`}
 												>
-													View Your Auction Item 🎉
+													View Your Item
 												</Link>
 											</div>
 										</div>
@@ -425,11 +425,7 @@ function Profile() {
 											"won"
 										)
 									}
-									className={`bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
-										currentPageWon === 1
-											? "cursor-not-allowed opacity-50"
-											: ""
-									}`}
+									className={`${styles.button} mt-4 800px:mt-0 text-white`}
 									disabled={currentPageWon === 1}
 								>
 									Previous
@@ -445,12 +441,7 @@ function Profile() {
 											"won"
 										)
 									}
-									className={`bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
-										currentPageWon === totalPagesWon ||
-										totalPagesWon === 0
-											? "cursor-not-allowed opacity-50"
-											: ""
-									}`}
+									className={`${styles.button} mt-4 800px:mt-0 text-white`}
 									disabled={
 										currentPageWon === totalPagesWon ||
 										totalPagesWon === 0
@@ -459,7 +450,7 @@ function Profile() {
 									Next
 								</button>
 							</div>
-						</div> */}
+						</div>
 					</div>
 				</div>
 			</div>
